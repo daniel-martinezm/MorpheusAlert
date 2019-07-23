@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dmartinez.morpheusalert.MainActivity">
+
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="230dp"
+        android:layout_height="55dp"
+        android:onClick="connectDevice"
+        android:text="@string/button_connect"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_message"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSignal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_signal"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintLeft_toRightOf="@+id/txtMessage"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtMessage" />
+
+    <TextView
+        android:id="@+id/tvAttention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/tv_attention"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignal"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tvTheta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_theta"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAttention" />
+
+    <TextView
+        android:id="@+id/tvAlphaLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_alpha_low"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTheta"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tvAlphaHigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_alpha_high"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlphaLow"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tvSignal_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvSignal"
+        app:layout_constraintLeft_toRightOf="@+id/tvSignal" />
+
+    <TextView
+        android:id="@+id/tvAttention_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAttention"
+        app:layout_constraintLeft_toRightOf="@+id/tvAttention" />
+
+    <TextView
+        android:id="@+id/tvTheta_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvTheta"
+        app:layout_constraintLeft_toRightOf="@+id/tvTheta" />
+
+    <TextView
+        android:id="@+id/tvAlphaLow_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAlphaLow"
+        app:layout_constraintLeft_toRightOf="@+id/tvAlphaLow" />
+
+    <TextView
+        android:id="@+id/tvAlphaHigh_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAlphaHigh"
+        app:layout_constraintLeft_toRightOf="@+id/tvAlphaHigh" />
+
+    <ImageView
+        android:id="@+id/imageViewSignal"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_marginRight="16dp"
+        android:maxHeight="@android:dimen/app_icon_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/nosignal_v1"
+        tools:layout_editor_absoluteY="3dp"
+        tools:maxWidth="@android:dimen/app_icon_size" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/tv_status"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="300dp" />
+
+    <TextView
+        android:id="@+id/tvStatus_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="None"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvStatus"
+        app:layout_constraintLeft_toRightOf="@+id/tvStatus" />
+
+    <TextView
+        android:id="@+id/tvBetaLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_beta_low"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlphaHigh" />
+
+    <TextView
+        android:id="@+id/tvBetaHigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_beta_high"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBetaLow" />
+
+    <TextView
+        android:id="@+id/tvBetaLow_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvBetaLow"
+        app:layout_constraintLeft_toRightOf="@+id/tvBetaLow" />
+
+    <TextView
+        android:id="@+id/tvBetaHigh_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvBetaHigh"
+        app:layout_constraintLeft_toRightOf="@+id/tvBetaHigh" />
+
+    <TextView
+        android:id="@+id/tvLog_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+    <TextView
+        android:id="@+id/tvRatio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_ratio"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBetaHigh" />
+
+    <TextView
+        android:id="@+id/tvRatio_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvRatio"
+        app:layout_constraintLeft_toRightOf="@+id/tvRatio" />
+
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="119dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnConnect"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

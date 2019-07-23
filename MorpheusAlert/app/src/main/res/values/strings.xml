@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MorpheusAlert</string>
+    <string name="button_connect">Connect</string>
+    <string name="tv_signal">Signal:</string>
+    <string name="tv_attention">Attention:</string>
+    <string name="tv_theta">Theta:</string>
+    <string name="tv_alpha_low">Alpha Low:</string>
+    <string name="tv_alpha_high">Alpha High:</string>
+    <string name="tv_status">Current Status:</string>
+    <string name="tv_beta_low">Beta Low:</string>
+    <string name="tv_beta_high">Beta High:</string>
+    <string name="tv_message">Headset Values</string>
+    <string name="tv_ratio">Magnitude Ratio:\n
+             \t\t\t\t(\u03B1+\u03B8)/\u03B2</string>
+</resources>
